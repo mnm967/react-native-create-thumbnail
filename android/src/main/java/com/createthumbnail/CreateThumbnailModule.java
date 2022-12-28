@@ -168,7 +168,7 @@ public class CreateThumbnailModule extends ReactContextBaseJavaModule {
         return dir;
     }
 
-    private static Bitmap getBitmapAtTime(Context context, String filePath, int time, Map headers) {
+    private static Bitmap getBitmapAtTime(Context context, String filePath, int time, Map headers) throws java.io.IOException {
         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
         if (URLUtil.isFileUrl(filePath)) {
             String decodedPath;
